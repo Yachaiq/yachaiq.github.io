@@ -4,75 +4,111 @@
   <meta charset="UTF-8">
   <title>YACHAIQ | Soluciones Tecnológicas Integrales</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f9fafb;
+      color: #374151;
       line-height: 1.6;
     }
+
     header {
-      padding: 80px 20px;
+      background: white;
+      padding: 60px 20px;
       text-align: center;
-      background: linear-gradient(135deg, #0f172a, #020617);
+      border-bottom: 1px solid #e5e7eb;
     }
+
+    header img {
+      max-width: 160px;
+      margin-bottom: 20px;
+    }
+
     header h1 {
-      font-size: 2.8rem;
+      font-size: 2.4rem;
+      color: #0b2c4d;
       margin-bottom: 10px;
     }
+
     header p {
-      max-width: 800px;
+      max-width: 850px;
       margin: auto;
-      font-size: 1.2rem;
-      color: #cbd5f5;
+      font-size: 1.1rem;
     }
+
     section {
-      padding: 60px 20px;
+      padding: 70px 20px;
       max-width: 1100px;
       margin: auto;
     }
+
     h2 {
-      color: #38bdf8;
-      margin-bottom: 20px;
+      color: #0b2c4d;
+      margin-bottom: 25px;
     }
+
     .grid {
       display: grid;
-      gap: 20px;
+      gap: 25px;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
+
     .card {
-      background: #020617;
+      background: white;
       padding: 25px;
-      border-radius: 10px;
-      border: 1px solid #1e293b;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
     }
+
+    .card h3 {
+      color: #1fbf84;
+      margin-bottom: 10px;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin: 8px 12px 8px 0;
+      padding: 12px 18px;
+      background: #0b2c4d;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact a.whatsapp {
+      background: #1fbf84;
+    }
+
     footer {
       text-align: center;
       padding: 30px;
-      background: #020617;
-      color: #94a3b8;
-    }
-    a {
-      color: #38bdf8;
-      text-decoration: none;
+      background: #0b2c4d;
+      color: #e5e7eb;
+      margin-top: 60px;
     }
   </style>
 </head>
+
 <body>
 
 <header>
+  <img src="logo.png" alt="YACHAIQ Logo">
   <h1>YACHAIQ</h1>
-  <p>Soluciones Tecnológicas Integrales para empresas, hogares y sectores productivos. 
-     Integramos software, inteligencia digital, infraestructura y automatización.</p>
+  <p>
+    Soluciones Tecnológicas Integrales para empresas, hogares y sectores productivos.
+    Integramos software, inteligencia digital, infraestructura y automatización.
+  </p>
 </header>
 
 <section>
   <h2>Quiénes Somos</h2>
   <p>
-    YACHAIQ Soluciones Tecnológicas Integrales EIRL es una empresa orientada al diseño,
-    implementación y operación de soluciones tecnológicas modernas, enfocadas en la
-    eficiencia, automatización y transformación digital.
+    YACHAIQ Soluciones Tecnológicas Integrales EIRL es una empresa enfocada en diseñar,
+    implementar y operar soluciones tecnológicas modernas que optimizan procesos,
+    mejoran la eficiencia y acompañan la transformación digital.
   </p>
 </section>
 
@@ -80,49 +116,37 @@
   <h2>Divisiones de Negocio</h2>
   <div class="grid">
     <div class="card">
-      <h3>🧠 Inteligencia Digital y Software</h3>
-      <p>Desarrollo de software a medida, plataformas web, automatización de procesos,
-         análisis de datos e inteligencia aplicada.</p>
+      <h3>Inteligencia Digital y Software</h3>
+      <p>Software a medida, plataformas web, automatización y análisis de datos.</p>
     </div>
     <div class="card">
-      <h3>🛠️ Infraestructura y Soporte TI</h3>
-      <p>Gestión de servidores, redes, soporte técnico, ciberseguridad y continuidad
-         operativa.</p>
+      <h3>Infraestructura y Soporte TI</h3>
+      <p>Redes, servidores, soporte técnico, ciberseguridad y continuidad operativa.</p>
     </div>
     <div class="card">
-      <h3>🏠 Smart Systems & Automation</h3>
-      <p>Domótica, automatización, sistemas inteligentes de control, seguridad y
-         monitoreo.</p>
+      <h3>Smart Systems & Automation</h3>
+      <p>Domótica, sistemas inteligentes, control, monitoreo y automatización.</p>
     </div>
     <div class="card">
-      <h3>🛒 Comercial y Retail Tecnológico</h3>
-      <p>Venta de hardware, software, licencias, dispositivos inteligentes y soluciones
-         tecnológicas integrales.</p>
+      <h3>Comercial y Retail Tecnológico</h3>
+      <p>Venta de hardware, software, licencias y soluciones tecnológicas integrales.</p>
     </div>
   </div>
 </section>
 
 <section>
-  <h2>Servicios</h2>
-  <ul>
-    <li>Desarrollo de software y aplicaciones</li>
-    <li>Automatización de procesos empresariales</li>
-    <li>Soporte técnico e infraestructura TI</li>
-    <li>Sistemas inteligentes y domótica</li>
-    <li>Consultoría y capacitación tecnológica</li>
-  </ul>
-</section>
-
-<section>
   <h2>Contacto</h2>
-  <p>
-    📧 contacto.yachaiq@gmail.com<br>
-    📍 Perú
-  </p>
+  <div class="contact">
+    <a class="whatsapp" href="https://wa.me/51953713010" target="_blank">WhatsApp</a>
+    <a href="mailto:yachaiq@gmail.com">Correo</a>
+    <a href="https://www.instagram.com/yachaiq/" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com/yachaiq" target="_blank">Facebook</a>
+    <a href="https://www.tiktok.com/@yachaiq?lang=es" target="_blank">TikTok</a>
+  </div>
 </section>
 
 <footer>
-  © 2026 YACHAIQ Soluciones Tecnológicas Integrales EIRL
+  © 2026 YACHAIQ Soluciones Tecnológicas Integrales EIRL – Perú
 </footer>
 
 </body>
