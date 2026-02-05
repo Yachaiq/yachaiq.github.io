@@ -1,122 +1,149 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Codificación de caracteres -->
+  <!-- ===============================
+       CONFIGURACIÓN GENERAL
+  ================================ -->
+
   <meta charset="UTF-8">
 
-  <!-- Título que aparece en la pestaña del navegador -->
+  <!-- Título que se ve en la pestaña del navegador -->
   <title>YACHAIQ | Soluciones Tecnológicas Integrales</title>
 
-  <!-- Hace que la web se vea bien en celular -->
+  <!-- Adaptación a celular -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Librería de iconos (Font Awesome) -->
+  <!-- Librería de iconos (redes, secciones, etc.) -->
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
-    /* ====== ESTILOS GENERALES ====== */
+    /* ===============================
+       ESTILOS GENERALES
+    ================================ */
+
     body {
       margin: 0;
       font-family: "Segoe UI", Arial, sans-serif;
-      background: #f9fafb; /* Fondo claro */
-      color: #374151;      /* Texto gris oscuro */
+      background-color: #f8fafc; /* Fondo claro */
+      color: #374151;
     }
 
-    /* ====== HERO / PORTADA ====== */
+    /* ===============================
+       HERO / PORTADA
+    ================================ */
+
     .hero {
       position: relative;
-      height: 90vh; /* Ocupa casi toda la pantalla */
-      background: url('portada.jpg') center/cover no-repeat;
+      height: 90vh; /* Altura de la portada */
+      background: url("portada.jpg") center / cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    /* Capa oscura sobre la imagen (overlay) */
-    .hero::after {
+    /* Capa oscura encima de la imagen
+       Sirve para que el texto resalte */
+    .hero::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-    rgba(11, 44, 77, 0.85),/* ← AQUÍ controlas oscuridad */
-    rgba(11, 44, 77, 0.85)
-  ); 
+      background: rgba(0, 0, 0, 0.65); /* Oscurece la imagen */
     }
 
-    /* Contenido que va encima de la portada */
+    /* Contenido que va ENCIMA de la imagen */
     .hero-content {
-      position: relative;
+      position: relative; /* IMPORTANTÍSIMO */
       text-align: center;
       color: white;
-      max-width: 900px;
       padding: 20px;
+      max-width: 900px;
     }
 
-    /* Logo en la portada */
-    .hero img {
-      max-width: 160px;
+    /* ===============================
+       LOGO CIRCULAR
+    ================================ */
+
+    .hero-logo {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%; /* Hace el logo circular */
+      object-fit: cover;  /* Evita deformaciones */
+      background: white;
+      padding: 12px;
+
+      /* Sombra para destacar */
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+
       margin-bottom: 25px;
     }
 
-    /* TÍTULO PRINCIPAL */
+    /* ===============================
+       TEXTO SOBRE LA PORTADA
+    ================================ */
+
     .hero h1 {
-      font-size: 3.6rem;        /* Tamaño del texto */
+      font-size: 3.6rem;
       font-weight: 900;
-     /* margin-bottom: 15px;
-      font-weight: 1500;      /* Intensidad del texto */
-      letter-spacing: 2px;   /* Espaciado entre letras */
+      letter-spacing: 2px;
       text-transform: uppercase;
+      margin-bottom: 15px;
+
+      /* TEXTO BLANCO + SOMBRA NEGRA */
       color: #ffffff;
-      text-shadow: /*0 4px 15px rgba(0,0,0,0.9); /* Intensidad visual */
-            0 2px 4px rgba(0,0,0,0.6),
-            0 6px 18px rgba(0,0,0,0.9);
+      text-shadow:
+        0 3px 6px rgba(0,0,0,0.9),
+        0 8px 22px rgba(0,0,0,0.9);
     }
 
-    /* Subtítulo */
     .hero p {
-      font-size: 1.35rem;
+      font-size: 1.4rem;
       font-weight: 500;
-      color: #f1f5f9;
+      max-width: 750px;
+      margin: auto;
 
+      color: #ffffff;
       text-shadow:
-            0 2px 10px rgba(0,0,0,0.8);
-}
+        0 2px 10px rgba(0,0,0,0.9);
+    }
 
-    /* ====== SECCIONES ====== */
+    /* ===============================
+       SECCIONES GENERALES
+    ================================ */
+
     section {
-      padding: 80px 20px;
       max-width: 1100px;
       margin: auto;
+      padding: 80px 20px;
     }
 
-    /* Títulos de sección */
     h2 {
-      color: #0b2c4d;
-      margin-bottom: 35px;
       display: flex;
       align-items: center;
       gap: 12px;
+      color: #0b2c4d;
+      margin-bottom: 30px;
     }
 
-    /* Iconos al costado de los títulos */
     h2 i {
       color: #1fbf84;
     }
 
-    /* Grilla de tarjetas */
+    /* ===============================
+       TARJETAS / GRID
+    ================================ */
+
     .grid {
       display: grid;
-      gap: 25px;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
     }
 
-    /* Tarjetas */
     .card {
       background: white;
       padding: 30px;
       border-radius: 14px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     }
 
     .card h3 {
@@ -124,7 +151,10 @@
       margin-bottom: 10px;
     }
 
-    /* ====== CONTACTO / REDES ====== */
+    /* ===============================
+       CONTACTO / REDES
+    ================================ */
+
     .socials {
       display: flex;
       flex-wrap: wrap;
@@ -135,83 +165,99 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      padding: 14px 20px;
+      padding: 14px 22px;
       border-radius: 10px;
-      text-decoration: none;
       color: white;
+      text-decoration: none;
       font-weight: 600;
     }
 
-    /* Colores por red */
     .whatsapp { background: #25D366; }
     .instagram { background: #E1306C; }
     .facebook { background: #1877F2; }
     .tiktok { background: #000; }
     .email { background: #0b2c4d; }
 
-    /* ====== FOOTER ====== */
+    /* ===============================
+       FOOTER
+    ================================ */
+
     footer {
       background: #0b2c4d;
       color: #e5e7eb;
       text-align: center;
       padding: 35px 20px;
     }
+
   </style>
 </head>
 
 <body>
 
-<!-- ====== PORTADA ====== -->
+<!-- ===============================
+     PORTADA / HERO
+=============================== -->
 <div class="hero">
   <div class="hero-content">
-    <!-- Logo -->
-    <img src="logo.png" alt="YACHAIQ Logo">
 
-    <!-- Título principal -->
+    <!-- LOGO CIRCULAR -->
+    <img src="logo.png" alt="Logo YACHAIQ" class="hero-logo">
+
+    <!-- TÍTULO PRINCIPAL -->
     <h1>Soluciones Tecnológicas Integrales</h1>
 
-    <!-- Subtítulo -->
-    <p>Transformamos procesos mediante tecnología, inteligencia digital e innovación aplicada.</p>
+    <!-- SUBTÍTULO -->
+    <p>
+      Transformamos procesos empresariales mediante tecnología,
+      automatización e innovación aplicada.
+    </p>
+
   </div>
 </div>
 
-<!-- ====== QUIÉNES SOMOS ====== -->
+<!-- ===============================
+     QUIÉNES SOMOS
+=============================== -->
 <section>
   <h2><i class="fa-solid fa-building"></i> Quiénes Somos</h2>
   <p>
-    YACHAIQ Soluciones Tecnológicas Integrales EIRL diseña e implementa soluciones
-    tecnológicas modernas para empresas y sectores productivos.
+    YACHAIQ Soluciones Tecnológicas Integrales EIRL desarrolla e implementa
+    soluciones tecnológicas modernas para empresas y sectores productivos.
   </p>
 </section>
 
-<!-- ====== SERVICIOS ====== -->
+<!-- ===============================
+     DIVISIONES
+=============================== -->
 <section>
   <h2><i class="fa-solid fa-diagram-project"></i> Divisiones de Negocio</h2>
 
   <div class="grid">
     <div class="card">
       <h3><i class="fa-solid fa-brain"></i> Inteligencia Digital</h3>
-      <p>Automatización, software y soluciones inteligentes.</p>
+      <p>Automatización, software y análisis avanzado.</p>
     </div>
 
     <div class="card">
       <h3><i class="fa-solid fa-network-wired"></i> Infraestructura TI</h3>
-      <p>Redes, servidores y soporte especializado.</p>
+      <p>Soporte, redes y servidores.</p>
     </div>
 
     <div class="card">
       <h3><i class="fa-solid fa-house-signal"></i> Smart Systems</h3>
-      <p>Domótica y control inteligente.</p>
+      <p>Domótica y sistemas inteligentes.</p>
     </div>
 
     <div class="card">
       <h3><i class="fa-solid fa-store"></i> Retail Tecnológico</h3>
-      <p>Venta de soluciones tecnológicas.</p>
+      <p>Venta de soluciones y equipos tecnológicos.</p>
     </div>
   </div>
 </section>
 
-<!-- ====== CONTACTO ====== -->
+<!-- ===============================
+     CONTACTO
+=============================== -->
 <section>
   <h2><i class="fa-solid fa-address-book"></i> Contacto</h2>
 
