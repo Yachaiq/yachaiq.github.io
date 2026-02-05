@@ -38,7 +38,10 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(11, 44, 77, 0.65); /* ← AQUÍ controlas oscuridad */
+      background: linear-gradient(
+    rgba(11, 44, 77, 0.85),/* ← AQUÍ controlas oscuridad */
+    rgba(11, 44, 77, 0.85)
+  ); 
     }
 
     /* Contenido que va encima de la portada */
@@ -58,18 +61,27 @@
 
     /* TÍTULO PRINCIPAL */
     .hero h1 {
-      font-size: 4rem;        /* Tamaño del texto */
-      margin-bottom: 15px;
+      font-size: 3.6rem;        /* Tamaño del texto */
+      font-weight: 900;
+     /* margin-bottom: 15px;
       font-weight: 1500;      /* Intensidad del texto */
-      letter-spacing: 1px;   /* Espaciado entre letras */
-      text-shadow: 0 4px 15px rgba(0,0,0,0.9); /* Intensidad visual */
+      letter-spacing: 2px;   /* Espaciado entre letras */
+      text-transform: uppercase;
+      color: #ffffff;
+      text-shadow: /*0 4px 15px rgba(0,0,0,0.9); /* Intensidad visual */
+            0 2px 4px rgba(0,0,0,0.6),
+            0 6px 18px rgba(0,0,0,0.9);
     }
 
     /* Subtítulo */
     .hero p {
-      font-size: 2rem;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-    }
+      font-size: 1.35rem;
+      font-weight: 500;
+      color: #f1f5f9;
+
+      text-shadow:
+            0 2px 10px rgba(0,0,0,0.8);
+}
 
     /* ====== SECCIONES ====== */
     section {
