@@ -1,36 +1,22 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="es-PE">
 <head>
-  <!-- ===============================
-       CONFIGURACIÓN BÁSICA + SEO
-  =============================== -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO FUERTE -->
-  <title>YachAIQ | Soluciones Tecnológicas Integrales en Perú</title>
-  <meta name="description"
-        content="YachAIQ brinda soluciones tecnológicas, inteligencia artificial, soporte TI y automatización para empresas y negocios en Perú.">
-  <meta name="keywords"
-        content="tecnología Perú, inteligencia artificial, soporte TI, automatización, soluciones tecnológicas">
-  <meta name="author" content="YachAIQ">
-<!-- SEO LOCAL PERÚ -->
-<meta name="geo.region" content="PE">
-<meta name="geo.placename" content="Perú">
-<meta name="language" content="es-PE">
+  <!-- SEO LOCAL AREQUIPA -->
+  <title>YachAIQ | Soluciones Tecnológicas en Arequipa, Perú</title>
+  <meta name="description" content="YachAIQ ofrece soluciones tecnológicas, inteligencia artificial, automatización y soporte TI para empresas en Arequipa y todo el Perú.">
+  <meta name="keywords" content="soluciones tecnológicas Arequipa, inteligencia artificial Arequipa, soporte TI Arequipa, automatización Perú">
+  <meta name="author" content="YachAIQ Soluciones Tecnológicas EIRL">
+  <meta name="robots" content="index, follow">
+  <meta name="geo.region" content="PE-ARE">
+  <meta name="geo.placename" content="Arequipa, Perú">
+  <meta name="language" content="es-PE">
 
-<!-- NEGOCIO -->
-<meta name="author" content="YachAIQ Soluciones Tecnológicas EIRL">
-<meta name="robots" content="index, follow">
+  <!-- ICONOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- ICONOS (Font Awesome) -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- ===============================
-       ESTILOS GENERALES
-  =============================== -->
   <style>
     body {
       margin: 0;
@@ -39,13 +25,6 @@
       color: #333;
     }
 
-    a {
-      text-decoration: none;
-    }
-
-    /* -------------------------------
-       HEADER / PORTADA
-    -------------------------------- */
     header {
       background: url("portada.jpg") center/cover no-repeat;
       height: 100vh;
@@ -53,12 +32,11 @@
       color: white;
     }
 
-    /* Capa oscura para resaltar texto */
     header::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.55);
+      background: rgba(0,0,0,0.55);
     }
 
     .hero {
@@ -67,13 +45,12 @@
       height: 100%;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       text-align: center;
       padding: 20px;
     }
 
-    /* LOGO CIRCULAR */
     .hero img {
       width: 140px;
       height: 140px;
@@ -88,12 +65,11 @@
     }
 
     .hero p {
-      font-size: 1.3em;
       max-width: 700px;
+      font-size: 1.3em;
       text-shadow: 1px 1px 6px black;
     }
 
-    /* BOTONES */
     .btn {
       margin-top: 25px;
       padding: 14px 28px;
@@ -105,15 +81,11 @@
       display: inline-block;
     }
 
-    /* EFECTO HOVER */
     .btn:hover {
       background: #159b6a;
       transform: scale(1.05);
     }
 
-    /* -------------------------------
-       SECCIONES
-    -------------------------------- */
     section {
       padding: 80px 20px;
       text-align: center;
@@ -126,7 +98,7 @@
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
       gap: 25px;
       max-width: 1100px;
       margin: auto;
@@ -137,16 +109,13 @@
       padding: 30px;
       border-radius: 15px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s;
     }
 
     .card:hover {
       transform: translateY(-10px);
     }
 
-    /* -------------------------------
-       REDES SOCIALES
-    -------------------------------- */
     .social a {
       margin: 0 15px;
       font-size: 30px;
@@ -157,33 +126,6 @@
     .social a:hover {
       color: #159b6a;
       transform: scale(1.3);
-    }
-
-    /* -------------------------------
-       FORMULARIO
-    -------------------------------- */
-    input, textarea {
-      width: 100%;
-      padding: 15px;
-      margin-bottom: 15px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
-
-    button {
-      background: #1fbf84;
-      color: white;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: all 0.3s;
-    }
-
-    button:hover {
-      background: #159b6a;
-      transform: scale(1.05);
     }
 
     footer {
@@ -197,98 +139,64 @@
 
 <body>
 
-<!-- ===============================
-     PORTADA
-=============================== -->
 <header>
   <div class="hero">
-    <img src="logo.png" alt="Logo YachAIQ">
+    <img src="logo.png" alt="Logo YachAIQ Arequipa">
     <h1>YachAIQ</h1>
-    <p>Soluciones Tecnológicas Integrales, Inteligencia Artificial y Soporte TI para empresas en Perú</p>
-
-    <!-- BOTONES A OTRAS PÁGINAS -->
+    <p>Soluciones Tecnológicas Integrales para empresas en Arequipa y todo el Perú</p>
     <a href="servicios.html" class="btn">Nuestros Servicios</a>
     <a href="empresas.html" class="btn">Empresas</a>
   </div>
 </header>
 
-<!-- ===============================
-     QUIÉNES SOMOS
-=============================== -->
-<section>
-  <h2><i class="fa-solid fa-building"></i> ¿Quiénes somos?</h2>
-  <p>
-    YachAIQ es una empresa tecnológica enfocada en crear soluciones modernas,
-    eficientes y escalables para negocios y organizaciones.
-  </p>
-</section>
-
-<!-- ===============================
-     SERVICIOS RESUMEN
-=============================== -->
 <section>
   <h2><i class="fa-solid fa-diagram-project"></i> Nuestras Divisiones</h2>
 
   <div class="cards">
-
-    <!-- DIVISIÓN 1 -->
     <div class="card">
       <i class="fa-solid fa-brain fa-2x"></i>
       <h3>Inteligencia & Software</h3>
-      <p>
-        Soluciones basadas en Inteligencia Artificial, automatización de procesos
-        y desarrollo de software a medida.
-      </p>
+      <p>IA, automatización y desarrollo de software a medida.</p>
     </div>
 
-    <!-- DIVISIÓN 2 -->
     <div class="card">
       <i class="fa-solid fa-network-wired fa-2x"></i>
       <h3>Infraestructura & Soporte TI</h3>
-      <p>
-        Gestión de redes, servidores, ciberseguridad y soporte técnico
-        para empresas y organizaciones.
-      </p>
+      <p>Redes, servidores, ciberseguridad y soporte técnico.</p>
     </div>
 
-    <!-- DIVISIÓN 3 -->
     <div class="card">
       <i class="fa-solid fa-house-signal fa-2x"></i>
       <h3>Smart & Automation</h3>
-      <p>
-        Domótica, automatización inteligente y sistemas tecnológicos
-        aplicados a hogares, empresas y vehículos.
-      </p>
+      <p>Domótica y automatización inteligente.</p>
     </div>
 
-    <!-- DIVISIÓN 4 -->
     <div class="card">
       <i class="fa-solid fa-store fa-2x"></i>
       <h3>Comercial & Retail Tecnológico</h3>
-      <p>
-        Comercialización de hardware, licencias, servicios digitales
-        y soluciones tecnológicas especializadas.
-      </p>
+      <p>Hardware, licencias y soluciones comerciales.</p>
     </div>
-
   </div>
 </section>
 
+<section>
+  <h2><i class="fa-solid fa-location-dot"></i> Cobertura</h2>
+  <p>
+    Atendemos empresas y organizaciones en Arequipa y en todo el Perú,
+    de manera presencial y remota.
+  </p>
+</section>
 
-<!-- ===============================
-     CONTACTO + FORMULARIO
-=============================== -->
 <section id="contacto">
   <h2><i class="fa-solid fa-paper-plane"></i> Contáctanos</h2>
 
-  <form action="https://formspree.io/f/mlgwrbwn" method="POST" style="max-width:600px; margin:auto;">
+  <form action="https://formspree.io/f/mlgwrbwn" method="POST" style="max-width:600px;margin:auto;">
     <input type="text" name="nombre" placeholder="Nombre completo" required>
     <input type="email" name="email" placeholder="Correo electrónico" required>
     <textarea name="mensaje" rows="5" placeholder="Mensaje" required></textarea>
-    <button type="submit">Enviar mensaje</button>
+    <button type="submit" class="btn">Enviar mensaje</button>
   </form>
 
-  <!-- REDES -->
   <div class="social" style="margin-top:30px;">
     <a href="https://wa.me/51953713010"><i class="fab fa-whatsapp"></i></a>
     <a href="https://www.instagram.com/yachaiq/"><i class="fab fa-instagram"></i></a>
@@ -298,8 +206,33 @@
 </section>
 
 <footer>
-  © 2026 YachAIQ · Soluciones Tecnológicas Integrales
+  © 2026 YachAIQ · Arequipa – Perú
 </footer>
+
+<!-- SCHEMA LOCAL -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechnologyCompany",
+  "name": "YachAIQ Soluciones Tecnológicas EIRL",
+  "url": "https://yachaiq.github.io/",
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Arequipa, Perú"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+51-953-713-010",
+    "contactType": "customer service",
+    "availableLanguage": "Spanish"
+  },
+  "sameAs": [
+    "https://www.facebook.com/yachaiq",
+    "https://www.instagram.com/yachaiq/",
+    "https://www.tiktok.com/@yachaiq"
+  ]
+}
+</script>
 
 </body>
 </html>
