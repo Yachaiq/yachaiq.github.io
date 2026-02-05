@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Codificación de caracteres -->
   <meta charset="UTF-8">
+
+  <!-- Título que aparece en la pestaña del navegador -->
   <title>YACHAIQ | Soluciones Tecnológicas Integrales</title>
+
+  <!-- Hace que la web se vea bien en celular -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ICONOS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Librería de iconos (Font Awesome) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
+    /* ====== ESTILOS GENERALES ====== */
     body {
       margin: 0;
       font-family: "Segoe UI", Arial, sans-serif;
-      background: #f9fafb;
-      color: #374151;
+      background: #f9fafb; /* Fondo claro */
+      color: #374151;      /* Texto gris oscuro */
     }
 
-    /* HERO */
+    /* ====== HERO / PORTADA ====== */
     .hero {
       position: relative;
-      height: 90vh;
+      height: 90vh; /* Ocupa casi toda la pantalla */
       background: url('portada.jpg') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
+    /* Capa oscura sobre la imagen (overlay) */
     .hero::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(11, 44, 77, 0.65);
+      background: rgba(11, 44, 77, 0.65); /* ← AQUÍ controlas oscuridad */
     }
 
+    /* Contenido que va encima de la portada */
     .hero-content {
       position: relative;
       text-align: center;
@@ -41,26 +50,35 @@
       padding: 20px;
     }
 
+    /* Logo en la portada */
     .hero img {
       max-width: 160px;
       margin-bottom: 25px;
     }
 
+    /* TÍTULO PRINCIPAL */
     .hero h1 {
-      font-size: 3rem;
+      font-size: 3rem;        /* Tamaño del texto */
       margin-bottom: 15px;
+      font-weight: 900;      /* Intensidad del texto */
+      letter-spacing: 1px;   /* Espaciado entre letras */
+      text-shadow: 0 4px 15px rgba(0,0,0,0.7); /* Intensidad visual */
     }
 
+    /* Subtítulo */
     .hero p {
       font-size: 1.25rem;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.4);
     }
 
+    /* ====== SECCIONES ====== */
     section {
       padding: 80px 20px;
       max-width: 1100px;
       margin: auto;
     }
 
+    /* Títulos de sección */
     h2 {
       color: #0b2c4d;
       margin-bottom: 35px;
@@ -69,16 +87,19 @@
       gap: 12px;
     }
 
+    /* Iconos al costado de los títulos */
     h2 i {
       color: #1fbf84;
     }
 
+    /* Grilla de tarjetas */
     .grid {
       display: grid;
       gap: 25px;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 
+    /* Tarjetas */
     .card {
       background: white;
       padding: 30px;
@@ -91,7 +112,7 @@
       margin-bottom: 10px;
     }
 
-    /* CONTACTO */
+    /* ====== CONTACTO / REDES ====== */
     .socials {
       display: flex;
       flex-wrap: wrap;
@@ -106,15 +127,17 @@
       border-radius: 10px;
       text-decoration: none;
       color: white;
-      font-weight: 500;
+      font-weight: 600;
     }
 
+    /* Colores por red */
     .whatsapp { background: #25D366; }
     .instagram { background: #E1306C; }
     .facebook { background: #1877F2; }
     .tiktok { background: #000; }
     .email { background: #0b2c4d; }
 
+    /* ====== FOOTER ====== */
     footer {
       background: #0b2c4d;
       color: #e5e7eb;
@@ -126,61 +149,77 @@
 
 <body>
 
-<!-- HERO -->
+<!-- ====== PORTADA ====== -->
 <div class="hero">
   <div class="hero-content">
+    <!-- Logo -->
     <img src="logo.png" alt="YACHAIQ Logo">
+
+    <!-- Título principal -->
     <h1>Soluciones Tecnológicas Integrales</h1>
+
+    <!-- Subtítulo -->
     <p>Transformamos procesos mediante tecnología, inteligencia digital e innovación aplicada.</p>
   </div>
 </div>
 
+<!-- ====== QUIÉNES SOMOS ====== -->
 <section>
   <h2><i class="fa-solid fa-building"></i> Quiénes Somos</h2>
   <p>
     YACHAIQ Soluciones Tecnológicas Integrales EIRL diseña e implementa soluciones
-    tecnológicas modernas para empresas, hogares y sectores productivos,
-    enfocándose en eficiencia, automatización y transformación digital.
+    tecnológicas modernas para empresas y sectores productivos.
   </p>
 </section>
 
+<!-- ====== SERVICIOS ====== -->
 <section>
   <h2><i class="fa-solid fa-diagram-project"></i> Divisiones de Negocio</h2>
+
   <div class="grid">
     <div class="card">
       <h3><i class="fa-solid fa-brain"></i> Inteligencia Digital</h3>
-      <p>Software a medida, automatización, plataformas web y análisis de datos.</p>
+      <p>Automatización, software y soluciones inteligentes.</p>
     </div>
+
     <div class="card">
       <h3><i class="fa-solid fa-network-wired"></i> Infraestructura TI</h3>
-      <p>Redes, servidores, soporte técnico y ciberseguridad.</p>
+      <p>Redes, servidores y soporte especializado.</p>
     </div>
+
     <div class="card">
       <h3><i class="fa-solid fa-house-signal"></i> Smart Systems</h3>
-      <p>Domótica, control, monitoreo y automatización inteligente.</p>
+      <p>Domótica y control inteligente.</p>
     </div>
+
     <div class="card">
       <h3><i class="fa-solid fa-store"></i> Retail Tecnológico</h3>
-      <p>Venta de hardware, software y soluciones tecnológicas integrales.</p>
+      <p>Venta de soluciones tecnológicas.</p>
     </div>
   </div>
 </section>
 
+<!-- ====== CONTACTO ====== -->
 <section>
   <h2><i class="fa-solid fa-address-book"></i> Contacto</h2>
+
   <div class="socials">
     <a class="whatsapp" href="https://wa.me/51953713010" target="_blank">
       <i class="fa-brands fa-whatsapp"></i> WhatsApp
     </a>
+
     <a class="email" href="mailto:yachaiq@gmail.com">
       <i class="fa-solid fa-envelope"></i> Correo
     </a>
+
     <a class="instagram" href="https://www.instagram.com/yachaiq/" target="_blank">
       <i class="fa-brands fa-instagram"></i> Instagram
     </a>
+
     <a class="facebook" href="https://www.facebook.com/yachaiq" target="_blank">
       <i class="fa-brands fa-facebook"></i> Facebook
     </a>
+
     <a class="tiktok" href="https://www.tiktok.com/@yachaiq" target="_blank">
       <i class="fa-brands fa-tiktok"></i> TikTok
     </a>
@@ -193,4 +232,3 @@
 
 </body>
 </html>
-
