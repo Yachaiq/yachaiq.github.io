@@ -19,7 +19,7 @@
   <meta name="geo.position" content="-16.409047;-71.537451">
   <meta name="ICBM" content="-16.409047, -71.537451">
 
-  <!-- ICONOS -->
+  <!-- ICONOS FONT AWESOME -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- =========================
@@ -27,7 +27,7 @@
   ========================== -->
   <style>
 
-    /* -------- RESET BÁSICO -------- */
+    /* -------- RESET -------- */
     * {
       margin: 0;
       padding: 0;
@@ -96,7 +96,6 @@
       justify-content: center;
     }
 
-    /* Capa oscura sobre la imagen */
     header::before {
       content: "";
       position: absolute;
@@ -112,7 +111,6 @@
       padding: 20px;
     }
 
-    /* Logo circular */
     .hero img {
       width: 140px;
       height: 140px;
@@ -134,7 +132,7 @@
     }
 
     /* =========================
-       DIVISIONES (SERVICIOS)
+       DIVISIONES
     ========================== */
     .cards {
       display: grid;
@@ -194,7 +192,6 @@
       box-shadow: 0 0 8px rgba(31,191,132,0.3);
     }
 
-    /* -------- REDES SOCIALES -------- */
     .social {
       display: flex;
       justify-content: center;
@@ -211,6 +208,32 @@
     .social a:hover {
       color: #0f3d2e;
       transform: scale(1.3);
+    }
+
+    /* =========================
+       WHATSAPP FLOTANTE
+    ========================== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25d366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.15);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.4);
     }
 
     /* =========================
@@ -290,7 +313,6 @@
     </form>
 
     <div class="social">
-      <a href="https://wa.me/51953713010" target="_blank"><i class="fab fa-whatsapp"></i></a>
       <a href="https://www.instagram.com/yachaiq/" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://www.facebook.com/yachaiq" target="_blank"><i class="fab fa-facebook"></i></a>
       <a href="https://www.tiktok.com/@yachaiq" target="_blank"><i class="fab fa-tiktok"></i></a>
@@ -303,6 +325,13 @@
   <footer>
     © 2026 YachAIQ Soluciones Tecnológicas EIRL – Arequipa, Perú
   </footer>
+
+  <!-- =========================
+       BOTÓN WHATSAPP FLOTANTE
+  ========================== -->
+  <a href="https://wa.me/51953713010" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
 </body>
 </html>
