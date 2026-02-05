@@ -1,37 +1,102 @@
 <!DOCTYPE html>
 <html lang="es-PE">
 <head>
+
+  <!-- =========================
+       CONFIGURACIÓN BÁSICA + SEO
+  ========================== -->
   <meta charset="UTF-8">
+  <title>YachAIQ Soluciones Tecnológicas | Arequipa - Perú</title>
+
+  <meta name="description" content="YachAIQ Soluciones Tecnológicas en Arequipa, Perú. Inteligencia Artificial, Software a Medida, Infraestructura TI, Automatización y Comercialización Tecnológica.">
+  <meta name="keywords" content="IA Arequipa, software Arequipa, automatización Perú, infraestructura TI Arequipa, YachAIQ">
+  <meta name="author" content="YachAIQ Soluciones Tecnológicas EIRL">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO LOCAL AREQUIPA -->
-  <title>YachAIQ | Soluciones Tecnológicas en Arequipa, Perú</title>
-  <meta name="description" content="YachAIQ ofrece soluciones tecnológicas, inteligencia artificial, automatización y soporte TI para empresas en Arequipa y todo el Perú.">
-  <meta name="keywords" content="soluciones tecnológicas Arequipa, inteligencia artificial Arequipa, soporte TI Arequipa, automatización Perú">
-  <meta name="author" content="YachAIQ Soluciones Tecnológicas EIRL">
-  <meta name="robots" content="index, follow">
+  <!-- SEO Local -->
   <meta name="geo.region" content="PE-ARE">
-  <meta name="geo.placename" content="Arequipa, Perú">
-  <meta name="language" content="es-PE">
+  <meta name="geo.placename" content="Arequipa">
+  <meta name="geo.position" content="-16.409047;-71.537451">
+  <meta name="ICBM" content="-16.409047, -71.537451">
 
   <!-- ICONOS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+  <!-- =========================
+       ESTILOS GENERALES
+  ========================== -->
   <style>
-    body {
+
+    /* -------- RESET BÁSICO -------- */
+    * {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
       background: #f5f7fa;
       color: #333;
+      line-height: 1.6;
     }
 
-    header {
-      background: url("portada.jpg") center/cover no-repeat;
-      height: 100vh;
-      position: relative;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* -------- BOTONES -------- */
+    .btn {
+      background: #1fbf84;
       color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      display: inline-block;
     }
 
+    .btn:hover {
+      background: #159b6a;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* -------- SECCIONES -------- */
+    section {
+      padding: 70px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 40px;
+      color: #0f3d2e;
+    }
+
+    h2 i {
+      color: #1fbf84;
+      margin-right: 10px;
+    }
+
+    /* =========================
+       PORTADA / HERO
+    ========================== */
+    header {
+      position: relative;
+      height: 90vh;
+      background: url("portada.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Capa oscura sobre la imagen */
     header::before {
       content: "";
       position: absolute;
@@ -41,16 +106,13 @@
 
     .hero {
       position: relative;
-      z-index: 1;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       text-align: center;
+      color: white;
+      max-width: 800px;
       padding: 20px;
     }
 
+    /* Logo circular */
     .hero img {
       width: 140px;
       height: 140px;
@@ -60,179 +122,187 @@
     }
 
     .hero h1 {
-      font-size: 3em;
-      text-shadow: 2px 2px 8px black;
+      font-size: 42px;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 6px black;
     }
 
     .hero p {
-      max-width: 700px;
-      font-size: 1.3em;
-      text-shadow: 1px 1px 6px black;
+      font-size: 20px;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 6px black;
     }
 
-    .btn {
-      margin-top: 25px;
-      padding: 14px 28px;
-      border-radius: 30px;
-      background: #1fbf84;
-      color: white;
-      font-weight: bold;
-      transition: all 0.3s ease;
-      display: inline-block;
-    }
-
-    .btn:hover {
-      background: #159b6a;
-      transform: scale(1.05);
-    }
-
-    section {
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    h2 {
-      font-size: 2.2em;
-      margin-bottom: 20px;
-    }
-
+    /* =========================
+       DIVISIONES (SERVICIOS)
+    ========================== */
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 25px;
-      max-width: 1100px;
-      margin: auto;
     }
 
     .card {
       background: white;
+      border-radius: 16px;
       padding: 30px;
-      border-radius: 15px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
       transition: transform 0.3s;
     }
 
     .card:hover {
-      transform: translateY(-10px);
+      transform: translateY(-8px);
+    }
+
+    .card i {
+      font-size: 40px;
+      color: #1fbf84;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #0f3d2e;
+    }
+
+    /* =========================
+       CONTACTO
+    ========================== */
+    #contacto {
+      background: #eef3f7;
+      border-radius: 20px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #1fbf84;
+      box-shadow: 0 0 8px rgba(31,191,132,0.3);
+    }
+
+    /* -------- REDES SOCIALES -------- */
+    .social {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 30px;
     }
 
     .social a {
-      margin: 0 15px;
-      font-size: 30px;
+      font-size: 34px;
       color: #1fbf84;
-      transition: transform 0.3s, color 0.3s;
+      transition: all 0.3s ease;
     }
 
     .social a:hover {
-      color: #159b6a;
+      color: #0f3d2e;
       transform: scale(1.3);
     }
 
+    /* =========================
+       FOOTER
+    ========================== */
     footer {
-      background: #111;
-      color: #aaa;
-      padding: 30px;
       text-align: center;
+      padding: 25px;
+      background: #0f3d2e;
+      color: white;
+      margin-top: 50px;
     }
+
   </style>
 </head>
 
 <body>
 
-<header>
-  <div class="hero">
-    <img src="logo.png" alt="Logo YachAIQ Arequipa">
-    <h1>YachAIQ</h1>
-    <p>Soluciones Tecnológicas Integrales para empresas en Arequipa y todo el Perú</p>
-    <a href="servicios.html" class="btn">Nuestros Servicios</a>
-    <a href="empresas.html" class="btn">Empresas</a>
-  </div>
-</header>
-
-<section>
-  <h2><i class="fa-solid fa-diagram-project"></i> Nuestras Divisiones</h2>
-
-  <div class="cards">
-    <div class="card">
-      <i class="fa-solid fa-brain fa-2x"></i>
-      <h3>Inteligencia & Software</h3>
-      <p>IA, automatización y desarrollo de software a medida.</p>
+  <!-- =========================
+       PORTADA
+  ========================== -->
+  <header>
+    <div class="hero">
+      <img src="logo.png" alt="Logo YachAIQ">
+      <h1>YachAIQ Soluciones Tecnológicas</h1>
+      <p>Innovación, Inteligencia y Tecnología para Empresas en Arequipa y el Perú</p>
+      <a href="#contacto" class="btn">Contáctanos</a>
     </div>
+  </header>
 
-    <div class="card">
-      <i class="fa-solid fa-network-wired fa-2x"></i>
-      <h3>Infraestructura & Soporte TI</h3>
-      <p>Redes, servidores, ciberseguridad y soporte técnico.</p>
+  <!-- =========================
+       DIVISIONES
+  ========================== -->
+  <section>
+    <h2><i class="fa-solid fa-layer-group"></i>Nuestras Divisiones</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <i class="fa-solid fa-brain"></i>
+        <h3>División de Inteligencia y Software</h3>
+        <p>IA, Machine Learning, automatización de procesos, software a medida, apps y plataformas web.</p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-server"></i>
+        <h3>División de Infraestructura y Soporte</h3>
+        <p>Servidores, redes, soporte técnico, ciberseguridad, backup y gestión TI.</p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-house-chimney"></i>
+        <h3>División Smart & Automation</h3>
+        <p>Domótica, automatización industrial, control inteligente y soluciones avanzadas.</p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-store"></i>
+        <h3>División Comercial y Retail</h3>
+        <p>Venta de hardware, licencias, equipos tecnológicos y servicios digitales.</p>
+      </div>
+
     </div>
+  </section>
 
-    <div class="card">
-      <i class="fa-solid fa-house-signal fa-2x"></i>
-      <h3>Smart & Automation</h3>
-      <p>Domótica y automatización inteligente.</p>
+  <!-- =========================
+       CONTACTO
+  ========================== -->
+  <section id="contacto">
+    <h2><i class="fa-solid fa-paper-plane"></i>Contáctanos</h2>
+
+    <form action="https://formspree.io/f/mlgwrbwn" method="POST">
+      <input type="text" name="nombre" placeholder="Nombre completo" required>
+      <input type="email" name="email" placeholder="Correo electrónico" required>
+      <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+      <button type="submit" class="btn">Enviar mensaje</button>
+    </form>
+
+    <div class="social">
+      <a href="https://wa.me/51953713010" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/yachaiq/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/yachaiq" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.tiktok.com/@yachaiq" target="_blank"><i class="fab fa-tiktok"></i></a>
     </div>
+  </section>
 
-    <div class="card">
-      <i class="fa-solid fa-store fa-2x"></i>
-      <h3>Comercial & Retail Tecnológico</h3>
-      <p>Hardware, licencias y soluciones comerciales.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2><i class="fa-solid fa-location-dot"></i> Cobertura</h2>
-  <p>
-    Atendemos empresas y organizaciones en Arequipa y en todo el Perú,
-    de manera presencial y remota.
-  </p>
-</section>
-
-<section id="contacto">
-  <h2><i class="fa-solid fa-paper-plane"></i> Contáctanos</h2>
-
-  <form action="https://formspree.io/f/mlgwrbwn" method="POST" style="max-width:600px;margin:auto;">
-    <input type="text" name="nombre" placeholder="Nombre completo" required>
-    <input type="email" name="email" placeholder="Correo electrónico" required>
-    <textarea name="mensaje" rows="5" placeholder="Mensaje" required></textarea>
-    <button type="submit" class="btn">Enviar mensaje</button>
-  </form>
-
-  <div class="social" style="margin-top:30px;">
-    <a href="https://wa.me/51953713010"><i class="fab fa-whatsapp"></i></a>
-    <a href="https://www.instagram.com/yachaiq/"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.facebook.com/yachaiq"><i class="fab fa-facebook"></i></a>
-    <a href="https://www.tiktok.com/@yachaiq"><i class="fab fa-tiktok"></i></a>
-  </div>
-</section>
-
-<footer>
-  © 2026 YachAIQ · Arequipa – Perú
-</footer>
-
-<!-- SCHEMA LOCAL -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "TechnologyCompany",
-  "name": "YachAIQ Soluciones Tecnológicas EIRL",
-  "url": "https://yachaiq.github.io/",
-  "areaServed": {
-    "@type": "AdministrativeArea",
-    "name": "Arequipa, Perú"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+51-953-713-010",
-    "contactType": "customer service",
-    "availableLanguage": "Spanish"
-  },
-  "sameAs": [
-    "https://www.facebook.com/yachaiq",
-    "https://www.instagram.com/yachaiq/",
-    "https://www.tiktok.com/@yachaiq"
-  ]
-}
-</script>
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer>
+    © 2026 YachAIQ Soluciones Tecnológicas EIRL – Arequipa, Perú
+  </footer>
 
 </body>
 </html>
