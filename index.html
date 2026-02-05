@@ -4,16 +4,11 @@
   <!-- ===============================
        CONFIGURACIÓN GENERAL
   ================================ -->
-
   <meta charset="UTF-8">
-
-  <!-- Título que se ve en la pestaña del navegador -->
   <title>YACHAIQ | Soluciones Tecnológicas Integrales</title>
-
-  <!-- Adaptación a celular -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Librería de iconos (redes, secciones, etc.) -->
+  <!-- ICONOS -->
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -21,95 +16,12 @@
     /* ===============================
        ESTILOS GENERALES
     ================================ */
-
     body {
       margin: 0;
       font-family: "Segoe UI", Arial, sans-serif;
-      background-color: #f8fafc; /* Fondo claro */
+      background-color: #f8fafc;
       color: #374151;
     }
-
-    /* ===============================
-       HERO / PORTADA
-    ================================ */
-
-    .hero {
-      position: relative;
-      height: 90vh; /* Altura de la portada */
-      background: url("portada.jpg") center / cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* Capa oscura encima de la imagen
-       Sirve para que el texto resalte */
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.65); /* Oscurece la imagen */
-    }
-
-    /* Contenido que va ENCIMA de la imagen */
-    .hero-content {
-      position: relative; /* IMPORTANTÍSIMO */
-      text-align: center;
-      color: white;
-      padding: 20px;
-      max-width: 900px;
-    }
-
-    /* ===============================
-       LOGO CIRCULAR
-    ================================ */
-
-    .hero-logo {
-      width: 170px;
-      height: 170px;
-      border-radius: 50%; /* Hace el logo circular */
-      object-fit: cover;  /* Evita deformaciones */
-      background: white;
-      padding: 12px;
-
-      /* Sombra para destacar */
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-
-      margin-bottom: 25px;
-    }
-
-    /* ===============================
-       TEXTO SOBRE LA PORTADA
-    ================================ */
-
-    .hero h1 {
-      font-size: 3.6rem;
-      font-weight: 900;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 15px;
-
-      /* TEXTO BLANCO + SOMBRA NEGRA */
-      color: #ffffff;
-      text-shadow:
-        0 3px 6px rgba(0,0,0,0.9),
-        0 8px 22px rgba(0,0,0,0.9);
-    }
-
-    .hero p {
-      font-size: 1.4rem;
-      font-weight: 500;
-      max-width: 750px;
-      margin: auto;
-
-      color: #ffffff;
-      text-shadow:
-        0 2px 10px rgba(0,0,0,0.9);
-    }
-
-    /* ===============================
-       SECCIONES GENERALES
-    ================================ */
 
     section {
       max-width: 1100px;
@@ -130,9 +42,85 @@
     }
 
     /* ===============================
-       TARJETAS / GRID
+       HERO / PORTADA
+    ================================ */
+    .hero {
+      position: relative;
+      height: 90vh;
+      background: url("portada.jpg") center / cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Capa oscura para contraste */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .hero-content {
+      position: relative;
+      text-align: center;
+      color: white;
+      max-width: 900px;
+      padding: 20px;
+    }
+
+    /* LOGO CIRCULAR */
+    .hero-logo {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: white;
+      padding: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      margin-bottom: 25px;
+    }
+
+    /* TEXTO HERO */
+    .hero h1 {
+      font-size: 3.6rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #ffffff;
+      text-shadow:
+        0 3px 6px rgba(0,0,0,0.9),
+        0 8px 22px rgba(0,0,0,0.9);
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #ffffff;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.9);
+    }
+
+    /* ===============================
+       ANIMACIONES (FADE + SLIDE)
     ================================ */
 
+    /* Estado inicial */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    /* Estado visible */
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===============================
+       GRID / TARJETAS
+    ================================ */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -152,9 +140,8 @@
     }
 
     /* ===============================
-       CONTACTO / REDES
+       REDES / CONTACTO
     ================================ */
-
     .socials {
       display: flex;
       flex-wrap: wrap;
@@ -179,78 +166,81 @@
     .email { background: #0b2c4d; }
 
     /* ===============================
+       BOTÓN WHATSAPP FLOTANTE
+    ================================ */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+      z-index: 1000;
+      text-decoration: none;
+    }
+
+    /* ===============================
        FOOTER
     ================================ */
-
     footer {
       background: #0b2c4d;
       color: #e5e7eb;
       text-align: center;
       padding: 35px 20px;
     }
-
   </style>
 </head>
 
 <body>
 
 <!-- ===============================
-     PORTADA / HERO
+     HERO
 =============================== -->
 <div class="hero">
-  <div class="hero-content">
-
-    <!-- LOGO CIRCULAR -->
-    <img src="logo.png" alt="Logo YACHAIQ" class="hero-logo">
-
-    <!-- TÍTULO PRINCIPAL -->
+  <div class="hero-content fade-up">
+    <img src="logo.png" class="hero-logo" alt="YACHAIQ Logo">
     <h1>Soluciones Tecnológicas Integrales</h1>
-
-    <!-- SUBTÍTULO -->
-    <p>
-      Transformamos procesos empresariales mediante tecnología,
-      automatización e innovación aplicada.
-    </p>
-
+    <p>Innovación, automatización y tecnología aplicada a resultados reales.</p>
   </div>
 </div>
 
 <!-- ===============================
      QUIÉNES SOMOS
 =============================== -->
-<section>
+<section class="fade-up">
   <h2><i class="fa-solid fa-building"></i> Quiénes Somos</h2>
   <p>
-    YACHAIQ Soluciones Tecnológicas Integrales EIRL desarrolla e implementa
-    soluciones tecnológicas modernas para empresas y sectores productivos.
+    YACHAIQ es una empresa tecnológica orientada a diseñar, implementar
+    y mantener soluciones digitales modernas para empresas, instituciones
+    y sectores productivos.
   </p>
 </section>
 
 <!-- ===============================
-     DIVISIONES
+     POR QUÉ ELEGIRNOS
 =============================== -->
-<section>
-  <h2><i class="fa-solid fa-diagram-project"></i> Divisiones de Negocio</h2>
+<section class="fade-up">
+  <h2><i class="fa-solid fa-star"></i> ¿Por qué elegirnos?</h2>
 
   <div class="grid">
     <div class="card">
-      <h3><i class="fa-solid fa-brain"></i> Inteligencia Digital</h3>
-      <p>Automatización, software y análisis avanzado.</p>
+      <h3>✔ Enfoque práctico</h3>
+      <p>Soluciones orientadas a resultados, no solo tecnología.</p>
     </div>
-
     <div class="card">
-      <h3><i class="fa-solid fa-network-wired"></i> Infraestructura TI</h3>
-      <p>Soporte, redes y servidores.</p>
+      <h3>✔ Adaptabilidad</h3>
+      <p>Nos ajustamos a la realidad de cada empresa.</p>
     </div>
-
     <div class="card">
-      <h3><i class="fa-solid fa-house-signal"></i> Smart Systems</h3>
-      <p>Domótica y sistemas inteligentes.</p>
-    </div>
-
-    <div class="card">
-      <h3><i class="fa-solid fa-store"></i> Retail Tecnológico</h3>
-      <p>Venta de soluciones y equipos tecnológicos.</p>
+      <h3>✔ Soporte continuo</h3>
+      <p>Acompañamiento antes, durante y después.</p>
     </div>
   </div>
 </section>
@@ -258,26 +248,22 @@
 <!-- ===============================
      CONTACTO
 =============================== -->
-<section>
+<section class="fade-up">
   <h2><i class="fa-solid fa-address-book"></i> Contacto</h2>
 
   <div class="socials">
     <a class="whatsapp" href="https://wa.me/51953713010" target="_blank">
       <i class="fa-brands fa-whatsapp"></i> WhatsApp
     </a>
-
     <a class="email" href="mailto:yachaiq@gmail.com">
       <i class="fa-solid fa-envelope"></i> Correo
     </a>
-
     <a class="instagram" href="https://www.instagram.com/yachaiq/" target="_blank">
       <i class="fa-brands fa-instagram"></i> Instagram
     </a>
-
     <a class="facebook" href="https://www.facebook.com/yachaiq" target="_blank">
       <i class="fa-brands fa-facebook"></i> Facebook
     </a>
-
     <a class="tiktok" href="https://www.tiktok.com/@yachaiq" target="_blank">
       <i class="fa-brands fa-tiktok"></i> TikTok
     </a>
@@ -287,6 +273,31 @@
 <footer>
   © 2026 YACHAIQ Soluciones Tecnológicas Integrales EIRL – Perú
 </footer>
+
+<!-- ===============================
+     BOTÓN WHATSAPP
+=============================== -->
+<a href="https://wa.me/51953713010" class="whatsapp-float" target="_blank">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- ===============================
+     SCRIPT DE ANIMACIÓN
+=============================== -->
+<script>
+  /* Detecta cuando los elementos entran en pantalla */
+  const elements = document.querySelectorAll(".fade-up");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  elements.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
