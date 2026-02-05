@@ -8,24 +8,20 @@
   <meta charset="UTF-8">
   <title>YachAIQ Soluciones Tecnológicas | Arequipa - Perú</title>
 
-  <meta name="description" content="YachAIQ Soluciones Tecnológicas en Arequipa, Perú. Inteligencia Artificial, Software a Medida, Infraestructura TI, Automatización y Comercialización Tecnológica.">
+  <meta name="description" content="YachAIQ Soluciones Tecnológicas en Arequipa, Perú. Inteligencia Artificial, Software, Infraestructura TI, Automatización y Venta de Tecnología.">
   <meta name="keywords" content="IA Arequipa, software Arequipa, automatización Perú, infraestructura TI Arequipa, YachAIQ">
   <meta name="author" content="YachAIQ Soluciones Tecnológicas EIRL">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO Local -->
+  <!-- SEO Local Arequipa -->
   <meta name="geo.region" content="PE-ARE">
   <meta name="geo.placename" content="Arequipa">
-  <meta name="geo.position" content="-16.409047;-71.537451">
-  <meta name="ICBM" content="-16.409047, -71.537451">
 
   <!-- ICONOS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    /* =========================
-       RESET Y BASE
-    ========================== */
+    /* ========= RESET ========= */
     * {
       margin: 0;
       padding: 0;
@@ -36,13 +32,12 @@
     body {
       background: #f5f7fa;
       color: #333;
+      line-height: 1.6;
     }
 
     a { text-decoration: none; color: inherit; }
 
-    /* =========================
-       NAVBAR (NUEVO – SIN ROMPER NADA)
-    ========================== */
+    /* ========= NAV ========= */
     nav {
       position: fixed;
       top: 0;
@@ -52,7 +47,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      z-index: 2000;
+      z-index: 3000;
     }
 
     nav .logo {
@@ -70,52 +65,19 @@
     nav ul li a {
       color: white;
       font-weight: 500;
-      transition: color 0.3s;
     }
 
     nav ul li a:hover {
       color: #1fbf84;
     }
 
-    /* =========================
-       BOTONES
-    ========================== */
-    .btn {
-      background: #1fbf84;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 30px;
-      font-weight: bold;
-      transition: all 0.3s;
-    }
-
-    .btn:hover {
-      background: #159b6a;
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    }
-
-    section {
-      padding: 90px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      color: #0f3d2e;
-    }
-
-    /* =========================
-       HERO
-    ========================== */
+    /* ========= HERO ========= */
     header {
       height: 100vh;
       background: url("portada.jpg") center/cover no-repeat;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       position: relative;
       margin-top: 60px;
     }
@@ -129,8 +91,9 @@
 
     .hero {
       position: relative;
-      color: white;
       text-align: center;
+      color: white;
+      max-width: 800px;
     }
 
     .hero img {
@@ -152,9 +115,41 @@
       text-shadow: 2px 2px 6px black;
     }
 
-    /* =========================
-       DIVISIONES
-    ========================== */
+    .btn {
+      background: #1fbf84;
+      color: white;
+      padding: 12px 26px;
+      border-radius: 30px;
+      font-weight: bold;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #159b6a;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    /* ========= SECCIONES ========= */
+    section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #0f3d2e;
+    }
+
+    h2 i {
+      color: #1fbf84;
+      margin-right: 8px;
+    }
+
+    /* ========= DIVISIONES ========= */
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -171,11 +166,10 @@
     .card i {
       font-size: 40px;
       color: #1fbf84;
+      margin-bottom: 10px;
     }
 
-    /* =========================
-       CONTACTO
-    ========================== */
+    /* ========= CONTACTO ========= */
     #contacto {
       background: #eef3f7;
       border-radius: 20px;
@@ -207,9 +201,7 @@
       color: #1fbf84;
     }
 
-    /* =========================
-       WHATSAPP FLOTANTE
-    ========================== */
+    /* ========= WHATSAPP ========= */
     .whatsapp-float {
       position: fixed;
       bottom: 25px;
@@ -223,7 +215,7 @@
       justify-content: center;
       color: white;
       font-size: 32px;
-      z-index: 3000;
+      z-index: 4000;
     }
 
     footer {
@@ -237,9 +229,7 @@
 
 <body>
 
-<!-- =========================
-     NAVBAR
-========================== -->
+<!-- NAV -->
 <nav>
   <div class="logo">YachAIQ</div>
   <ul>
@@ -250,24 +240,73 @@
   </ul>
 </nav>
 
+<!-- HERO -->
 <header>
   <div class="hero">
-    <img src="logo.png">
+    <img src="logo.png" alt="YachAIQ">
     <h1>YachAIQ Soluciones Tecnológicas</h1>
-    <p>Innovación y tecnología para empresas en Arequipa y el Perú</p>
+    <p>Innovación, inteligencia y tecnología para empresas en Arequipa y el Perú</p>
     <a href="servicios.html" class="btn">Ver Servicios</a>
   </div>
 </header>
 
-<!-- (EL RESTO DEL CONTENIDO SE MANTIENE IGUAL QUE ANTES) -->
+<!-- DIVISIONES -->
+<section>
+  <h2><i class="fa-solid fa-layer-group"></i>Nuestras Divisiones</h2>
+  <div class="cards">
 
-<a href="https://wa.me/51953713010" class="whatsapp-float" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
+    <div class="card">
+      <i class="fa-solid fa-brain"></i>
+      <h3>Inteligencia y Software</h3>
+      <p>IA, Machine Learning, automatización y software a medida.</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-server"></i>
+      <h3>Infraestructura y Soporte</h3>
+      <p>Servidores, redes, ciberseguridad y soporte técnico.</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-house-chimney"></i>
+      <h3>Smart & Automation</h3>
+      <p>Domótica, control inteligente y automatización.</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-store"></i>
+      <h3>Comercial y Retail</h3>
+      <p>Venta de hardware, licencias y soluciones tecnológicas.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <h2><i class="fa-solid fa-paper-plane"></i>Contacto</h2>
+
+  <form action="https://formspree.io/f/mlgwrbwn" method="POST">
+    <input type="text" name="nombre" placeholder="Nombre completo" required>
+    <input type="email" name="email" placeholder="Correo electrónico" required>
+    <textarea name="mensaje" rows="5" placeholder="Mensaje" required></textarea>
+    <button class="btn">Enviar mensaje</button>
+  </form>
+
+  <div class="social">
+    <a href="https://www.instagram.com/yachaiq/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/yachaiq" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.tiktok.com/@yachaiq" target="_blank"><i class="fab fa-tiktok"></i></a>
+  </div>
+</section>
 
 <footer>
   © 2026 YachAIQ Soluciones Tecnológicas EIRL – Arequipa, Perú
 </footer>
+
+<a href="https://wa.me/51953713010" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
 </body>
 </html>
