@@ -5,48 +5,72 @@
   <title>YACHAIQ | Soluciones Tecnológicas Integrales</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- ICONOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <style>
     body {
       margin: 0;
       font-family: "Segoe UI", Arial, sans-serif;
       background: #f9fafb;
       color: #374151;
-      line-height: 1.6;
     }
 
-    header {
-      background: white;
-      padding: 60px 20px;
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 90vh;
+      background: url('portada.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(11, 44, 77, 0.65);
+    }
+
+    .hero-content {
+      position: relative;
       text-align: center;
-      border-bottom: 1px solid #e5e7eb;
+      color: white;
+      max-width: 900px;
+      padding: 20px;
     }
 
-    header img {
+    .hero img {
       max-width: 160px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
-    header h1 {
-      font-size: 2.4rem;
-      color: #0b2c4d;
-      margin-bottom: 10px;
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
     }
 
-    header p {
-      max-width: 850px;
-      margin: auto;
-      font-size: 1.1rem;
+    .hero p {
+      font-size: 1.25rem;
     }
 
     section {
-      padding: 70px 20px;
+      padding: 80px 20px;
       max-width: 1100px;
       margin: auto;
     }
 
     h2 {
       color: #0b2c4d;
-      margin-bottom: 25px;
+      margin-bottom: 35px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h2 i {
+      color: #1fbf84;
     }
 
     .grid {
@@ -57,9 +81,9 @@
 
     .card {
       background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
     }
 
     .card h3 {
@@ -67,81 +91,99 @@
       margin-bottom: 10px;
     }
 
-    .contact a {
-      display: inline-block;
-      margin: 8px 12px 8px 0;
-      padding: 12px 18px;
-      background: #0b2c4d;
-      color: white;
-      border-radius: 8px;
+    /* CONTACTO */
+    .socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .socials a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 20px;
+      border-radius: 10px;
       text-decoration: none;
+      color: white;
       font-weight: 500;
     }
 
-    .contact a.whatsapp {
-      background: #1fbf84;
-    }
+    .whatsapp { background: #25D366; }
+    .instagram { background: #E1306C; }
+    .facebook { background: #1877F2; }
+    .tiktok { background: #000; }
+    .email { background: #0b2c4d; }
 
     footer {
-      text-align: center;
-      padding: 30px;
       background: #0b2c4d;
       color: #e5e7eb;
-      margin-top: 60px;
+      text-align: center;
+      padding: 35px 20px;
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <img src="logo.png" alt="YACHAIQ Logo">
-  <h1>YACHAIQ</h1>
-  <p>
-    Soluciones Tecnológicas Integrales para empresas, hogares y sectores productivos.
-    Integramos software, inteligencia digital, infraestructura y automatización.
-  </p>
-</header>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <img src="logo.png" alt="YACHAIQ Logo">
+    <h1>Soluciones Tecnológicas Integrales</h1>
+    <p>Transformamos procesos mediante tecnología, inteligencia digital e innovación aplicada.</p>
+  </div>
+</div>
 
 <section>
-  <h2>Quiénes Somos</h2>
+  <h2><i class="fa-solid fa-building"></i> Quiénes Somos</h2>
   <p>
-    YACHAIQ Soluciones Tecnológicas Integrales EIRL es una empresa enfocada en diseñar,
-    implementar y operar soluciones tecnológicas modernas que optimizan procesos,
-    mejoran la eficiencia y acompañan la transformación digital.
+    YACHAIQ Soluciones Tecnológicas Integrales EIRL diseña e implementa soluciones
+    tecnológicas modernas para empresas, hogares y sectores productivos,
+    enfocándose en eficiencia, automatización y transformación digital.
   </p>
 </section>
 
 <section>
-  <h2>Divisiones de Negocio</h2>
+  <h2><i class="fa-solid fa-diagram-project"></i> Divisiones de Negocio</h2>
   <div class="grid">
     <div class="card">
-      <h3>Inteligencia Digital y Software</h3>
-      <p>Software a medida, plataformas web, automatización y análisis de datos.</p>
+      <h3><i class="fa-solid fa-brain"></i> Inteligencia Digital</h3>
+      <p>Software a medida, automatización, plataformas web y análisis de datos.</p>
     </div>
     <div class="card">
-      <h3>Infraestructura y Soporte TI</h3>
-      <p>Redes, servidores, soporte técnico, ciberseguridad y continuidad operativa.</p>
+      <h3><i class="fa-solid fa-network-wired"></i> Infraestructura TI</h3>
+      <p>Redes, servidores, soporte técnico y ciberseguridad.</p>
     </div>
     <div class="card">
-      <h3>Smart Systems & Automation</h3>
-      <p>Domótica, sistemas inteligentes, control, monitoreo y automatización.</p>
+      <h3><i class="fa-solid fa-house-signal"></i> Smart Systems</h3>
+      <p>Domótica, control, monitoreo y automatización inteligente.</p>
     </div>
     <div class="card">
-      <h3>Comercial y Retail Tecnológico</h3>
-      <p>Venta de hardware, software, licencias y soluciones tecnológicas integrales.</p>
+      <h3><i class="fa-solid fa-store"></i> Retail Tecnológico</h3>
+      <p>Venta de hardware, software y soluciones tecnológicas integrales.</p>
     </div>
   </div>
 </section>
 
 <section>
-  <h2>Contacto</h2>
-  <div class="contact">
-    <a class="whatsapp" href="https://wa.me/51953713010" target="_blank">WhatsApp</a>
-    <a href="mailto:yachaiq@gmail.com">Correo</a>
-    <a href="https://www.instagram.com/yachaiq/" target="_blank">Instagram</a>
-    <a href="https://www.facebook.com/yachaiq" target="_blank">Facebook</a>
-    <a href="https://www.tiktok.com/@yachaiq?lang=es" target="_blank">TikTok</a>
+  <h2><i class="fa-solid fa-address-book"></i> Contacto</h2>
+  <div class="socials">
+    <a class="whatsapp" href="https://wa.me/51953713010" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i> WhatsApp
+    </a>
+    <a class="email" href="mailto:yachaiq@gmail.com">
+      <i class="fa-solid fa-envelope"></i> Correo
+    </a>
+    <a class="instagram" href="https://www.instagram.com/yachaiq/" target="_blank">
+      <i class="fa-brands fa-instagram"></i> Instagram
+    </a>
+    <a class="facebook" href="https://www.facebook.com/yachaiq" target="_blank">
+      <i class="fa-brands fa-facebook"></i> Facebook
+    </a>
+    <a class="tiktok" href="https://www.tiktok.com/@yachaiq" target="_blank">
+      <i class="fa-brands fa-tiktok"></i> TikTok
+    </a>
   </div>
 </section>
 
@@ -151,3 +193,4 @@
 
 </body>
 </html>
+
