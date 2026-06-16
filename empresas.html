@@ -3,123 +3,403 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO LOCAL AREQUIPA -->
   <title>Soluciones Tecnológicas para Empresas en Arequipa | YachAIQ</title>
-  <meta name="description"
-        content="Soluciones tecnológicas empresariales en Arequipa. Inteligencia artificial, soporte TI, automatización y tecnología para empresas.">
-  <meta name="keywords"
-        content="soluciones tecnológicas empresas Arequipa, soporte TI Arequipa, automatización empresarial Perú">
+  <meta name="description" content="Soluciones tecnológicas empresariales en Arequipa. Inteligencia artificial, soporte TI, automatización y tecnología para empresas.">
+  <meta name="keywords" content="soluciones tecnológicas empresas Arequipa, soporte TI Arequipa, automatización empresarial Perú">
   <meta name="author" content="YachAIQ Innovación y Tecnología EIRL">
   <meta name="robots" content="index, follow">
   <meta name="geo.region" content="PE-ARE">
   <meta name="geo.placename" content="Arequipa, Perú">
-  <meta name="language" content="es-PE">
 
-  <!-- ICONOS -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f7fa;
-      color: #333;
+    /* ===== VARIABLES ===== */
+    :root {
+      --navy:        #1B2F5E;
+      --navy-dark:   #111e3f;
+      --navy-light:  #243a74;
+      --green:       #2DC87B;
+      --green-dark:  #22a363;
+      --green-light: #e8f9f1;
+      --text:        #1a1a2e;
+      --muted:       #6b7280;
+      --bg:          #ffffff;
+      --bg-sub:      #f8fafc;
+      --border:      #e5e7eb;
+      --shadow:      0 4px 24px rgba(0,0,0,0.07);
+      --shadow-lg:   0 12px 40px rgba(0,0,0,0.11);
+      --r:           16px;
+      --r-sm:        10px;
     }
 
-    header {
-      background: linear-gradient(90deg, #063b27, #08402b);
-      padding: 70px 20px;
-      text-align: center;
-      color: white;
-    }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.6; overflow-x:hidden; }
+    a { text-decoration:none; color:inherit; }
+    ul { list-style:none; }
 
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 70px 20px;
-    }
+    .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+    .section    { padding:96px 0; }
 
-    .box {
-      background: white;
-      padding: 30px;
-      border-radius: 15px;
-      margin-bottom: 30px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    .lbl {
+      font-family:'Sora',sans-serif;
+      font-size:12px; font-weight:600;
+      letter-spacing:.15em; text-transform:uppercase;
+      color:var(--green); margin-bottom:12px;
     }
-
-    .btn {
-      background: #1fbf84;
-      color: white;
-      padding: 14px 28px;
-      border-radius: 30px;
-      font-weight: bold;
-      display: inline-block;
-      transition: all 0.3s;
+    .ttl {
+      font-family:'Sora',sans-serif;
+      font-size:clamp(28px,4vw,40px); font-weight:700;
+      color:var(--navy); line-height:1.2; margin-bottom:16px;
     }
+    .sub { font-size:17px; color:var(--muted); max-width:560px; line-height:1.7; }
 
-    .btn:hover {
-      background: #159b6a;
-      transform: scale(1.05);
+    /* ===== REVEAL ===== */
+    .reveal { opacity:0; transform:translateY(28px); transition:opacity .6s ease,transform .6s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    .d1 { transition-delay:.1s; } .d2 { transition-delay:.2s; }
+    .d3 { transition-delay:.3s; } .d4 { transition-delay:.4s; }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      position:fixed; top:0; width:100%; z-index:1000;
+      padding:0 24px;
+      transition:background .3s, box-shadow .3s, backdrop-filter .3s;
     }
+    .navbar.scrolled {
+      background:rgba(255,255,255,.93);
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
+      box-shadow:0 1px 0 var(--border);
+    }
+    .nav-inner {
+      max-width:1200px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between;
+      height:68px;
+    }
+    .nav-logo { display:flex; align-items:center; gap:10px; }
+    .logo-text { font-family:'Sora',sans-serif; font-weight:700; font-size:17px; color:var(--green); }
 
-    footer {
-      background: #111;
-      color: #aaa;
-      padding: 30px;
-      text-align: center;
+    .nav-links { display:flex; gap:4px; align-items:center; }
+    .nav-links a {
+      font-size:14px; font-weight:500; color:var(--text);
+      padding:8px 14px; border-radius:8px;
+      transition:background .2s;
+    }
+    .nav-links a:hover { background:var(--bg-sub); }
+    .nav-cta {
+      background:var(--green) !important; color:#fff !important;
+      margin-left:4px;
+      box-shadow:0 2px 12px rgba(45,200,123,.3);
+    }
+    .nav-cta:hover { background:var(--green-dark) !important; }
+
+    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:8px; background:none; border:none; }
+    .hamburger span { display:block; width:22px; height:2px; background:var(--navy); border-radius:2px; transition:.3s; }
+
+    .nav-mobile {
+      display:none; position:fixed; top:68px; left:0; right:0;
+      background:rgba(255,255,255,.97); backdrop-filter:blur(14px);
+      padding:12px 24px 24px; border-bottom:1px solid var(--border); z-index:999;
+    }
+    .nav-mobile.open { display:flex; flex-direction:column; gap:2px; }
+    .nav-mobile a { font-size:15px; font-weight:500; padding:12px 16px; border-radius:10px; transition:background .2s; }
+    .nav-mobile a:hover { background:var(--bg-sub); }
+
+    /* ===== PAGE HEADER ===== */
+    .page-header {
+      background-color:#fafbff;
+      background-image:
+        linear-gradient(rgba(27,47,94,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(27,47,94,.035) 1px, transparent 1px);
+      background-size:48px 48px;
+      padding:148px 24px 80px;
+      text-align:center; position:relative; overflow:hidden;
+    }
+    .page-header::before {
+      content:''; position:absolute; top:-20%; left:50%; transform:translateX(-50%);
+      width:800px; height:500px;
+      background:radial-gradient(ellipse, rgba(45,200,123,.08) 0%, transparent 70%);
+      pointer-events:none;
+    }
+    .page-header .lbl { margin-bottom:14px; }
+    .page-header .ttl { font-size:clamp(32px,5vw,52px); margin:0 auto 16px; max-width:700px; }
+    .page-header .sub { margin:0 auto 0; }
+
+    /* ===== CONTENT CARDS ===== */
+    .content-bg { background:var(--bg-sub); }
+
+    .ti {
+      display:flex; align-items:flex-start; gap:20px;
+      background:#fff; border:1px solid var(--border);
+      border-radius:var(--r); padding:32px;
+      transition:border-color .2s, box-shadow .2s, transform .2s;
+    }
+    .ti:hover {
+      border-color:var(--green);
+      box-shadow:0 0 0 3px rgba(45,200,123,.08), var(--shadow);
+      transform:translateY(-3px);
+    }
+    .ti-icon {
+      flex-shrink:0; width:56px; height:56px;
+      background:var(--green-light); color:var(--green-dark);
+      border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:22px;
+    }
+    .ti-txt h4 {
+      font-family:'Sora',sans-serif; font-weight:700; font-size:18px;
+      color:var(--navy); margin-bottom:8px;
+    }
+    .ti-txt p { font-size:15px; color:var(--muted); line-height:1.6; }
+
+    .content-grid { display:flex; flex-direction:column; gap:20px; max-width:800px; margin:0 auto; }
+
+    /* Beneficios list */
+    .bene-list { display:flex; flex-direction:column; gap:10px; margin-top:4px; }
+    .bene-list li {
+      display:flex; align-items:center; gap:12px;
+      font-size:15px; color:var(--muted);
+    }
+    .bene-list li i { color:var(--green); font-size:14px; flex-shrink:0; }
+
+    /* ===== STATS STRIP ===== */
+    .stats { background:var(--navy); padding:60px 24px; }
+    .stats-grid {
+      max-width:1200px; margin:0 auto;
+      display:grid; grid-template-columns:repeat(4,1fr); gap:24px; text-align:center;
+    }
+    .stat-num {
+      font-family:'Sora',sans-serif; font-size:42px; font-weight:800;
+      color:var(--green); line-height:1; margin-bottom:6px;
+    }
+    .stat-lbl { font-size:14px; color:rgba(255,255,255,.65); font-weight:500; }
+
+    /* ===== CTA ===== */
+    .cta { background:var(--navy); padding:96px 24px; text-align:center; }
+    .cta .lbl { color:rgba(45,200,123,.9); }
+    .cta h2 {
+      font-family:'Sora',sans-serif;
+      font-size:clamp(28px,4vw,44px); font-weight:700;
+      color:#fff; margin-bottom:14px;
+    }
+    .cta > .container > p { color:rgba(255,255,255,.6); font-size:17px; margin-bottom:40px; }
+    .cta-btns { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+
+    .btn-cwa {
+      display:inline-flex; align-items:center; gap:9px;
+      background:#25d366; color:#fff; font-weight:600; font-size:15px;
+      padding:14px 28px; border-radius:99px;
+      box-shadow:0 4px 20px rgba(37,211,102,.4);
+      transition:background .2s, transform .2s;
+    }
+    .btn-cwa:hover { background:#1ebe59; transform:translateY(-2px); }
+
+    .btn-mail {
+      display:inline-flex; align-items:center; gap:9px;
+      background:rgba(255,255,255,.1); color:#fff; font-weight:600; font-size:15px;
+      padding:14px 28px; border-radius:99px;
+      border:1.5px solid rgba(255,255,255,.2);
+      transition:background .2s, transform .2s;
+    }
+    .btn-mail:hover { background:rgba(255,255,255,.18); transform:translateY(-2px); }
+
+    /* ===== FOOTER ===== */
+    footer { background:var(--navy-dark); padding:40px 24px; }
+    .ft-inner {
+      max-width:1200px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between;
+      flex-wrap:wrap; gap:20px;
+    }
+    .ft-copy { font-size:13px; color:rgba(255,255,255,.4); }
+    .ft-social { display:flex; gap:18px; }
+    .ft-social a { font-size:20px; color:rgba(255,255,255,.35); transition:color .2s; }
+    .ft-social a:hover { color:var(--green); }
+
+    /* ===== WHATSAPP FLOAT ===== */
+    .wa-float {
+      position:fixed; bottom:28px; right:28px;
+      width:58px; height:58px;
+      background:#25d366; border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      color:#fff; font-size:28px; z-index:998;
+      box-shadow:0 4px 20px rgba(37,211,102,.5);
+      transition:transform .2s, box-shadow .2s;
+    }
+    .wa-float:hover { transform:scale(1.1); box-shadow:0 6px 28px rgba(37,211,102,.6); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width:640px) {
+      .nav-links { display:none; }
+      .hamburger { display:flex; }
+      .section    { padding:64px 0; }
+      .stats-grid { grid-template-columns:repeat(2,1fr); gap:32px; }
+      .ft-inner   { flex-direction:column; text-align:center; }
     }
   </style>
 </head>
-
 <body>
 
-<header>
-  <h1>Soluciones para Empresas</h1>
-  <p>Tecnología aplicada a resultados empresariales</p>
-  <a href="index.html" class="btn">Inicio</a>
-</header>
-
-<section>
-
-  <div class="box">
-    <h2><i class="fa-solid fa-building"></i> Enfoque Empresarial</h2>
-    <p>
-      Atendemos empresas y organizaciones en Arequipa y todo el Perú,
-      brindando soluciones tecnológicas confiables y escalables.
-    </p>
-  </div>
-
-  <div class="box">
-    <h2><i class="fa-solid fa-chart-line"></i> Beneficios</h2>
-    <ul>
-      <li>Optimización de procesos</li>
-      <li>Reducción de costos operativos</li>
-      <li>Soporte tecnológico confiable</li>
-      <li>Mejor toma de decisiones</li>
-    </ul>
-  </div>
-
-  <div class="box">
-    <h2><i class="fa-solid fa-handshake"></i> Proyectos y Alianzas</h2>
-    <p>
-      Desarrollamos proyectos tecnológicos y alianzas estratégicas
-      con empresas, instituciones y organizaciones.
-    </p>
-  </div>
-
-  <div style="text-align:center;">
-    <a href="https://wa.me/51953713010?text=Hola,%20necesito%20asesoramiento" class="btn">
-      <i class="fa-brands fa-whatsapp"></i> Solicitar Asesoramiento
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="YachAIQ" style="height:32px;">
+      <span class="logo-text">YachAIQ</span>
     </a>
+    <div class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#empresa">Empresa</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="index.html#proyectos">Proyectos</a>
+      <a href="index.html#contacto">Contacto</a>
+      <a href="https://wa.me/51953713010?text=Hola,%20necesito%20asesoramiento" class="nav-cta" target="_blank">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
   </div>
+</nav>
 
+<!-- MOBILE MENU -->
+<div class="nav-mobile" id="mobileMenu">
+  <a href="index.html">Inicio</a>
+  <a href="index.html#empresa">Empresa</a>
+  <a href="servicios.html">Servicios</a>
+  <a href="index.html#proyectos">Proyectos</a>
+  <a href="index.html#contacto">Contacto</a>
+  <a href="https://wa.me/51953713010?text=Hola,%20necesito%20asesoramiento" target="_blank">
+    <i class="fab fa-whatsapp"></i> WhatsApp
+  </a>
+</div>
+
+<!-- ===== PAGE HEADER ===== -->
+<div class="page-header">
+  <p class="lbl reveal">Para empresas</p>
+  <h1 class="ttl reveal d1">Soluciones para Empresas</h1>
+  <p class="sub reveal d2">Tecnología aplicada a resultados empresariales reales, desde Arequipa hacia todo el Perú.</p>
+</div>
+
+<!-- ===== STATS ===== -->
+<div class="stats">
+  <div class="stats-grid">
+    <div class="reveal">
+      <div class="stat-num">4</div>
+      <div class="stat-lbl">Divisiones especializadas</div>
+    </div>
+    <div class="reveal d1">
+      <div class="stat-num">+10</div>
+      <div class="stat-lbl">Proyectos realizados</div>
+    </div>
+    <div class="reveal d2">
+      <div class="stat-num">24h</div>
+      <div class="stat-lbl">Tiempo de respuesta</div>
+    </div>
+    <div class="reveal d3">
+      <div class="stat-num">100%</div>
+      <div class="stat-lbl">Equipo local Arequipa</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CONTENIDO ===== -->
+<section class="section content-bg">
+  <div class="container">
+    <div class="content-grid">
+
+      <div class="ti reveal">
+        <div class="ti-icon"><i class="fa-solid fa-building"></i></div>
+        <div class="ti-txt">
+          <h4>Enfoque Empresarial</h4>
+          <p>Atendemos empresas y organizaciones en Arequipa y todo el Perú, brindando soluciones tecnológicas confiables y escalables adaptadas a cada realidad empresarial.</p>
+        </div>
+      </div>
+
+      <div class="ti reveal d1">
+        <div class="ti-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <div class="ti-txt">
+          <h4>Beneficios</h4>
+          <ul class="bene-list">
+            <li><i class="fa-solid fa-circle-check"></i> Optimización de procesos</li>
+            <li><i class="fa-solid fa-circle-check"></i> Reducción de costos operativos</li>
+            <li><i class="fa-solid fa-circle-check"></i> Soporte tecnológico confiable</li>
+            <li><i class="fa-solid fa-circle-check"></i> Mejor toma de decisiones</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ti reveal d2">
+        <div class="ti-icon"><i class="fa-solid fa-handshake"></i></div>
+        <div class="ti-txt">
+          <h4>Proyectos y Alianzas</h4>
+          <p>Desarrollamos proyectos tecnológicos y alianzas estratégicas con empresas, instituciones y organizaciones para impulsar su crecimiento y transformación digital.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
 
+<!-- ===== CTA ===== -->
+<section class="cta">
+  <div class="container">
+    <p class="lbl reveal">¿Listo para empezar?</p>
+    <h2 class="reveal">Conversemos sobre tu proyecto</h2>
+    <p class="reveal">Cuéntanos qué necesitas y te respondemos en menos de 24 horas.</p>
+    <div class="cta-btns reveal">
+      <a href="https://wa.me/51953713010?text=Hola,%20necesito%20asesoramiento" class="btn-cwa" target="_blank">
+        <i class="fab fa-whatsapp"></i> Escribir por WhatsApp
+      </a>
+      <a href="mailto:contacto@yachaiq.pe" class="btn-mail">
+        <i class="fa-solid fa-envelope"></i> Enviar correo
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
 <footer>
-  © 2026 YachAIQ · Arequipa – Perú
+  <div class="ft-inner">
+    <div class="nav-logo">
+      <img src="logo.png" alt="YachAIQ" style="height:32px;">
+      <span class="logo-text">YachAIQ</span>
+    </div>
+    <p class="ft-copy">© 2026 YachAIQ Innovación y Tecnología EIRL – Arequipa, Perú</p>
+    <div class="ft-social">
+      <a href="https://www.instagram.com/yachaiq/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/yachaiq" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.tiktok.com/@yachaiq" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </div>
 </footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/51953713010?text=Hola,%20necesito%20asesoramiento" class="wa-float" target="_blank" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  const hbg = document.getElementById('hamburger');
+  const mob = document.getElementById('mobileMenu');
+  hbg.addEventListener('click', () => mob.classList.toggle('open'));
+  mob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mob.classList.remove('open')));
+
+  const ro = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+</script>
 
 </body>
 </html>
